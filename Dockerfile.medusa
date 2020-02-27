@@ -1,0 +1,8 @@
+FROM ubuntu:latest
+
+RUN apt update &&\
+    apt install -y medusa
+
+WORKDIR /Files
+ENTRYPOINT ["/usr/bin/medusa"]
+CMD ["/usr/bin/medusa"]
