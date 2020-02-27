@@ -1,0 +1,7 @@
+FROM golang:alpine as builder
+RUN apk add git
+RUN go get -u -v github.com/atredispartners/flamingo
+
+FROM alpine as main
+COPY --from=builder /go/bin/flamingo /flamingo
+ENTRYPOINT /flamingo
