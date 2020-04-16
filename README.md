@@ -16,6 +16,7 @@ cablethief/rpivot
 
 ```
 docker build -t apostille https://github.com/sensepost/apostille.git
+docker build -t cewl https://github.com/digininja/CeWL.git
 ```
 
 ## Aliases to add
