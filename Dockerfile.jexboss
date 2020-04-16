@@ -4,7 +4,7 @@ WORKDIR /jexboss
 RUN apk add git &&\
     git clone https://github.com/joaomatosf/jexboss /jexboss &&\
     pip install -r requires.txt &&\
-    find . -type f -exec sed -i -e 's/joaomatosf/OINOYOUBASKETSUNOFABICH/g' {} \;
+    find . -type f -exec sed -i -e 's/joaomatosf/pleasedontautoupdateandsearch/g' {} \;
 
 CMD ["/jexboss/jexboss.py"]
 ENTRYPOINT [ "/jexboss/jexboss.py" ]
