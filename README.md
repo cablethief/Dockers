@@ -12,6 +12,7 @@ cablethief/sshaft
 cablethief/rpivot
 rflathers/impacket
 drwetter/testssl.sh
+jpillora/chisel
 ```
 
 ### Github
