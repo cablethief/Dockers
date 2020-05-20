@@ -10,6 +10,8 @@ metasploitframework/metasploit-framework
 cowrie/cowrie
 cablethief/sshaft
 cablethief/rpivot
+rflathers/impacket
+drwetter/testssl.sh
 ```
 
 ### Github
