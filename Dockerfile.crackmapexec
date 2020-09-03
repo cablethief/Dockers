@@ -1,4 +1,4 @@
-FROM python:2-alpine
+FROM python:3-alpine
 WORKDIR /root
 
 RUN apk update && apk add git libffi libffi-dev gcc g++ make openssl-dev openssl openssh && \

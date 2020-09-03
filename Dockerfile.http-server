@@ -1,0 +1,10 @@
+FROM node:alpine
+
+ENV PUBLIC_FOLDER /opt/www
+
+RUN mkdir -p $PUBLIC_FOLDER
+RUN npm install --global http-server
+
+CMD http-server $PUBLIC_FOLDER
+
+EXPOSE 8080

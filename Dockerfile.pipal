@@ -1,0 +1,8 @@
+FROM ruby:alpine3.12
+
+RUN apk add git && \
+    git clone https://github.com/digininja/pipal /pipal
+
+WORKDIR /Files
+ENTRYPOINT ["/pipal/pipal.rb"]
+CMD ["/pipal/pipal.rb"]
