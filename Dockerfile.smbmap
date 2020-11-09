@@ -1,0 +1,9 @@
+FROM python:3-alpine
+
+WORKDIR /smbmap
+RUN apk add git gcc g++ make openssl-dev libffi libffi-dev &&\
+    git clone https://github.com/ShawnDEvans/smbmap --recursive . &&\
+    python3 -m pip install -r requirements.txt
+
+CMD ["/smbmap/smbmap.py"]
+ENTRYPOINT ["/smbmap/smbmap.py"]

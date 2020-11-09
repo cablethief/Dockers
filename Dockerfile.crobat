@@ -1,0 +1,8 @@
+FROM golang:alpine as builder
+RUN apk add git
+RUN go get -u -v github.com/cgboal/sonarsearch/crobat
+
+FROM alpine as main
+COPY --from=builder /go/bin/crobat /crobat
+#ENTRYPOINT /crobat
+CMD ["/bin/sh"]

@@ -13,6 +13,7 @@ cablethief/rpivot
 rflathers/impacket
 drwetter/testssl.sh
 jpillora/chisel
+byt3bl33d3r/crackmapexec
 ```
 
 ### Github
