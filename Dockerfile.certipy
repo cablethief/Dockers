@@ -1,0 +1,13 @@
+FROM python:3
+
+WORKDIR /smbmap
+RUN apt update ; apt install -y git gcc g++ make rustc openssl libssl-dev libffi-dev &&\
+    pip3 install setuptools_rust
+    
+RUN git clone https://github.com/ly4k/Certipy . &&\
+    python3 setup.py install
+
+RUN pip install pyopenssl &&\
+    pip install cryptography
+
+ENTRYPOINT ["certipy"]

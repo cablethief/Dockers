@@ -1,7 +1,6 @@
-FROM golang:alpine as builder
-RUN apk add git
-RUN go get -u -v github.com/atredispartners/flamingo
+FROM golang:1.13.6 as builder
+RUN /usr/local/go/bin/go get -u -v github.com/atredispartners/flamingo
 
-FROM alpine as main
+FROM gcr.io/distroless/base:latest
 COPY --from=builder /go/bin/flamingo /flamingo
-ENTRYPOINT /flamingo
+CMD ["/flamingo"]
